@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Student</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Beautiful Gradient Background */
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00d4ff;
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Heading */
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+p {
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 260px;
+    margin: 15px;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.15);
+}
+
+.card a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Form Box */
+.form-box {
+    width: 350px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.7;
+}
+  </style>
+
+
+</head>
+<body>
+
+<div class="navbar">
+  <div class="logo">StudentMS</div>
+  <div class="nav-links">
+    <a href="/">Home</a>
+  </div>
+</div>
+
+<div class="container">
+  <h1>Add New Student</h1>
+  <p>Fill in the details to register a student</p>
+
+
+  <form action=" /addstudent" method="post">
+  <div class="form-box" >
+    <input type="text" placeholder="Student ID" name="kodId">
+    <input type="text" placeholder="Student Name" name="name">
+    <input type="text" placeholder="Branch" name="branch">
+    <button>Add Student</button>
+  </div>
+
+  </form>
+
+</div>
+
+</body>
+</html>

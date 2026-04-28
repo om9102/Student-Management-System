@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Student Result</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1d2671, #c33764);
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .message {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        .table-container {
+            width: 60%;
+            margin: auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            color: black;
+        }
+
+        th {
+            background: #1d2671;
+            color: white;
+            padding: 12px;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background: #f1f5ff;
+        }
+
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #00c6ff;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .home-btn:hover {
+            background: #0072ff;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Message -->
+    <h2 class="message" th:text="${message}"></h2>
+
+</div>
+
+<div class="table-container" th:if="${student != null}">
+
+    <h2 style="text-align:center;">Student Details</h2>
+
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Branch</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td th:text="${student.kodId}"></td>
+            <td th:text="${student.name}"></td>
+            <td th:text="${student.branch}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<div style="text-align:center;">
+    <a href="/" class="home-btn">Go Home</a>
+</div>
+
+</body>
+</html>
