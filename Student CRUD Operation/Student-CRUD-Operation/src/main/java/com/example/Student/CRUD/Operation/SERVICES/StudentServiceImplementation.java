@@ -46,9 +46,5 @@ public class StudentServiceImplementation implements StudentServices {
     }
 
     
-       /*@Override
-    public String deleteStudent(Student kodId) {
-          srepo.delete(kodId);
-        return "Student Deleted Successfully !";
-    }*/
+       
 }
