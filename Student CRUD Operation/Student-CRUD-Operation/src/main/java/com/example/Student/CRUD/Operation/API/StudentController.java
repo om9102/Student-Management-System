@@ -57,11 +57,7 @@ public class StudentController {
 
 
 
- /*@DeleteMapping(value = "{kodId}")
-   public String deleteStudent(@PathVariable("kodId") Student kodId){
-        String delete = ss.deleteStudent(kodId);
-        return delete;
-   }*/
+
 
 
 }*/
